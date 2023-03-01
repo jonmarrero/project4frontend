@@ -3,7 +3,7 @@ import Post from "../components/Post";
 
 
 const Index = (props) => {
-  const team = useLoaderData();
+  const teams = useLoaderData();
 
   return <>
   <div style={{textAlign: "center"}}>
@@ -14,7 +14,7 @@ const Index = (props) => {
           <button>Create New Team</button>
       </Form>
   </div>
-  {team.map((post) => <Post key={post.id} post={post} />)}
+  {teams.map((post) => <Post key={post.id} post={post} />)}
   </>;
 };
 
