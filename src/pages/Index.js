@@ -14,7 +14,7 @@ const Index = (props) => {
           <button>Create New Team</button>
       </Form>
   </div>
-  {[teams].map((post) => <Post key={post.id} post={post} />)}
+  {teams?.map((post) => <Post key={post.id} post={post} />)}
   </>;
 };
 

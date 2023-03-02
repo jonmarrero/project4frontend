@@ -12,7 +12,7 @@ export async function CreateAction({ request }) {
   };
 
   // request to create route in backend
-  await fetch(url, {
+  await fetch(url + "/teams/", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export async function UpdateAction({ request, params }) {
     };
   
     // request to update route in backend
-    await fetch(url + params.id + "/", {
+    await fetch(url + "/teams/" + params.id + "/", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export async function UpdateAction({ request, params }) {
     const id = params.id
 
     // send request to delete
-    await fetch(url + id + "/", {
+    await fetch(url + "/teams/" + id + "/", {
         method: "delete"
     })
 
